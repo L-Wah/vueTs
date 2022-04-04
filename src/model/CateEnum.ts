@@ -1,0 +1,16 @@
+//0 - 工作
+//1 - 生活
+//2 - 学习
+
+// enum Category{
+//   Work = 0,
+//   Life = 1,
+//   Study = 2,
+// }
+// 使用默认枚举值: 枚举值自动从0开始排
+enum Category{
+  Work,
+  Life,
+  Study,
+}
+export default Category;
