@@ -108,21 +108,48 @@
   }
   
   #memos {
-    min-height: 800px;
     margin-top: 6px;
     padding: 0 30px;
+    display: flex;
   }
   
   .memo-container {
     padding: 6px;
-    float: left;
+    flex: 0 0 25%;
+    box-sizing: border-box;
+  }
+  .memo .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .memo .el-card__body {
+    flex: 1;
+    padding:10px
+  }
+  .memo .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .memo .text {
+    flex: 1;
+    font-size: 14px;
+  }
+  .memo .footer {
+    font-size: 12px;
+    text-align: right;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .memo {
     position: relative;
     border: 1px solid #bdbdbd;
     border-radius: 5px;
-    padding: 9px;
     background-color: #fff;
     transition: all 0.15s ease-in-out;
   }
@@ -324,42 +351,7 @@
     font-size: 12px;
     resize: none;
   }
-  
-  @media (max-width: 768px) {
-    #memos {
-      padding: 0 5px;
-    }
-  
-    .memo-container {
-      padding: 2px;
-      margin-top: 0;
-      width: 50%;
-    }   
-    .editor-layer{
-      width: 300px;
-      transform: translate(-50%,-50%);
-    }
 
-    
-  }
-  
-  @media (min-width: 768px) and (max-width: 992px) {
-    .memo-container {
-      width: 33.3%;
-    }
-  }
-  
-  @media (min-width: 992px) and (max-width: 1200px) {
-    .memo-container {
-      width: 25%;
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .memo-container {
-      width: 25%;
-    }
-  }
 .mt5 {
   margin-top: 5px;
 }

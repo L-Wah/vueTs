@@ -15,7 +15,8 @@
     "delete_success": "Success"
   },
   "card": {
-    "create_time": "created time",
+    "create_time": "createdTime",
+    "update_time": "updatedTime",
     "category": "category"
   },
   "pop_card": {

@@ -16,6 +16,7 @@
   },
   "card": {
     "create_time": "创建时间",
+    "update_time": "更新时间",
     "category": "分类"
   },
   "pop_card": {
@@ -27,7 +28,7 @@
     "life": "生活",
     "title": "标题",
     "content": "内容",
-    "not_complete_warning": "请完成所有选项后再保存。",
+    "not_complete_warning": "请填写完整后再保存。",
     "toolTip_del": "删除",
     "toolTip_edit": "编辑"
   }
