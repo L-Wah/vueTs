@@ -6,6 +6,7 @@ class ItemData {
   title!: string;
   content!: string;
   createTime!: string;
+  updateTime!: string;// 补充更新时间
 
   constructor(id: number = -1,categoryId: Category = -1,title: string = '',content: string = '') {
     this.id = id;
@@ -14,6 +15,7 @@ class ItemData {
     this.title = title;
     this.content = content;
     this.createTime = moment().format('YYYY-MM-DD HH:mm:ss').toString();
+    this.updateTime = moment().format('YYYY-MM-DD HH:mm:ss').toString();
   }
 }
 export default ItemData;
