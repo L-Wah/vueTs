@@ -4,6 +4,8 @@ import store from './store'
 import moment from "moment";
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import i18n from './locales';
+
 import ItemData from './model/ItemData'
 import Category from './model/CateEnum'
 import ActionHelper from './store/ActionHelper';
@@ -19,6 +21,7 @@ Vue.filter("formatDate", (value: number) => {
 
 new Vue({
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')
 
@@ -31,8 +34,8 @@ let ah = new ActionHelper();
 // let newItem = new ItemData(3,Category.Life,'单手开法拉利','吹牛~');
 // ah.add(newItem);
 //测试修改
-let editItem = new ItemData(2,Category.Life,'单手开宝马','真实~');
-ah.edit(editItem)
+// let editItem = new ItemData(2,Category.Life,'单手开宝马','真实~');
+// ah.edit(editItem)
 // 测试删除
 // ah.removed(3)
 console.log(ah.memoList);

@@ -1,6 +1,7 @@
 import ItemData from "@/model/ItemData";
 import DataHelper from "./DataHelper";
 import moment from "moment";
+import Category from "../model/CateEnum"
 class ActionHelper{
   //1.负责数据处理 DataHelper
   detaHelper:DataHelper = new DataHelper('menoData','id');
@@ -58,7 +59,7 @@ class ActionHelper{
     }
   }
   //2.4 删除笔记
-  removed(id:number):void{
+  remove(id:number):void{
     // 根据id 找出要删除的对象在数组中的下标
     let index:number = this.memoList.findIndex(ele=>{
       return ele.id == id;
@@ -69,6 +70,11 @@ class ActionHelper{
       // 将删除对象后的数组重新保存回本地
       this.detaHelper.saveData(this.memoList);
     }
+  }
+  //2.5 获取文章分类
+  getCategoryName(cateId:Category):string{
+    const arrName = ['工作','生活','学习'];
+    return arrName[cateId];
   }
 }
 export default ActionHelper;
